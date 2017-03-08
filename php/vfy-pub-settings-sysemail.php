@@ -14,7 +14,7 @@ $page_title = 'general-settings';
 </head>
 <body class="view-admin" id="top">
 <div class="wrapper">
-    <?php include ('includes/brand-header2.php') ?>
+    <?php include ('includes/brand-header-cas.php') ?>
     <?php include('includes/header-pub.php') ?>
     <div class="main-content container" role=main>
         <div id="main-content">
@@ -67,7 +67,7 @@ $page_title = 'general-settings';
             </div>
         </div>
     </div>
-    <?php include ('includes/brand-footer.php') ?>
+    <?php include ('includes/brand-footer-cas.php') ?>
 </div>
 </body>
 </html>

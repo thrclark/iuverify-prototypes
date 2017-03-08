@@ -13,7 +13,7 @@ $page_title = 'resetuser';
 </head>
 <body class="view-admin" id="top">
 <div class="wrapper">
-    <?php include ('includes/brand-header2.php') ?>
+    <?php include ('includes/brand-header-cas.php') ?>
     <?php include('includes/header-pub.php') ?>
     <div class="main-content container" role=main>
         <div id="main-content">
@@ -88,8 +88,7 @@ $page_title = 'resetuser';
                 </div>
             </div>
         </div>
-    </div>
-    <?php include ('includes/brand-footer.php') ?>
+    </div>  <?php include ('includes/brand-footer-cas.php') ?>
 </div>
 <div class="modal fade" id="settings_sysemail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-default" role="document">

@@ -12,7 +12,7 @@
     <div class="banner-preview">
         <div class="preview-text">Verification Preview</div>
     </div>
-    <?php include ('includes/brand-header2.php') ?>
+    <?php include ('includes/brand-header-cas.php') ?>
     <?php include ('includes/header2.php') ?>
     <div class="main-content container" role="main">
         <div id="main-content">
@@ -110,8 +110,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <?php include ('includes/brand-footer.php') ?>
+    </div>  <?php include ('includes/brand-footer-cas.php') ?>
     <script>
     $(document).ready(function() {
         $("#submit").click(function() {
