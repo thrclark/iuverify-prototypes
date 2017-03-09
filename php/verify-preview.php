@@ -58,8 +58,7 @@
                             <p class="form-control-static">xxxxxxxxxx</p>
                         </div>
                     </div>
-                    <div class="form-group form-group-sm form-section-control">
-                        <div class="col-sm-offset-2 col-sm-10 text-right"> <!--<a href="#" class="btn btn-xs btn-default">Refresh</a>--> <a href="#" class="btn btn-xs btn-primary edit-group">Edit</a> </div>
+                    <div class="form-group form-group-sm form-section-control"> <div class="col-sm-offset-2 col-sm-10 text-right"> <!--<a href="#" class="btn btn-xs btn-default">Refresh</a>--> <a href="#" class="btn btn-xs btn-primary edit-group">Edit</a> </div>
                     </div>
                     <div class="form-group form-group-sm">
                         <div class="col-sm-3 control-label">Label:</div>
@@ -79,8 +78,7 @@
                             <p class="form-control-static">xxxxxxxxxx</p>
                         </div>
                     </div>
-                    <div class="form-group form-group-sm form-section-control">
-                        <div class="col-sm-offset-2 col-sm-10 text-right"> <!--<a href="#" class="btn btn-xs btn-default">Refresh</a>--> <a href="#" class="btn btn-xs btn-primary edit-group">Edit</a> </div>
+                    <div class="form-group form-group-sm form-section-control"> <div class="col-sm-offset-2 col-sm-10 text-right"> <!--<a href="#" class="btn btn-xs btn-default">Refresh</a>--> <a href="#" class="btn btn-xs btn-primary edit-group">Edit</a> </div>
                     </div>
                 </div>
             </div>
