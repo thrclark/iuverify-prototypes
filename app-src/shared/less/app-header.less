@@ -4,46 +4,60 @@ header {
   .container {
     background: @header-container-background;
     padding-bottom: 7px;
-    .app-name {
-      padding-top: 7px;
-      padding-bottom: 0px;
-      font-size: 28px;
-      line-height: 28px;
-      margin: 0px;
-      padding-left: 0px;
-      //color: red;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      .app-name {
+        padding-top: 7px;
+        padding-bottom: 0px;
+        font-size: 28px;
+        line-height: 28px;
+        margin: 0px;
+        padding-left: 0px;
+        //color: red;
+      }
+      .navbar-text {
+        margin: 0px;
+        padding-bottom: 5px;
+        .small;
+        .pull-left;
+
+      }
     }
-    .navbar-text {
-      margin:0px;
-      padding-bottom: 5px;
-      .small;
-      .pull-left;
-    }
+
   }
 }
-
-
 
 @media (min-width: @screen-sm-min) {
   header {
+    min-height: auto;
 
     .container {
-      .app-name {
-        //padding-bottom: 10px;
-        //color: green;
-      }
-      .navbar-text {
-        padding-top: 12px;
-        .pull-right;
+      .row {
+        display: inherit;
+        flex-direction: inherit;
+        .app-name {
+          //padding-bottom: 10px;
+          //color: green;
+        }
+        .navbar-text {
+          padding-top: 12px;
+          .pull-right;
+
+        }
 
       }
+
     }
   }
 
 }
+
 @media (min-width: @screen-md-min) {
 
 }
+
 @media (min-width: @screen-lg-min) {
 
 }
