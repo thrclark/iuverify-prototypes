@@ -1,18 +1,14 @@
 header {
-
   .container {
-    min-height: 100px;
-    .navbar-brand {
-      font-size: 44px;
-      margin-top: 10px;
-      width: 100%;
+    padding-bottom: 15px;
+    .app-name {
+
     }
     .sub-header.small {
-      //color: #ffffff;
+      padding-top: 3px;
     }
     .dropdown.navbar-text {
       .btn-link {
-        //color: #e4e4e4;
         &:hover {
           text-decoration: none;
         }
@@ -24,24 +20,22 @@ header {
   }
 }
 
-@media (max-width: @screen-xs-max) {
-
+@media (min-width: @screen-sm-min) {
   header {
-    min-height: 75px;
-    margin-bottom: 10px;
+    //min-height: 75px;
+    margin-bottom: 0px;
     .container {
-      .navbar-brand {
-        font-size: 34px;
-        margin-top: 0px;
-        margin-bottom: -5px;
-        width: 100%;
+      .app-name {
+      }
+      .sub-header.small {
       }
       .navbar-text {
-        margin-right: 15px;
+        //margin-right: 15px;
         //margin-left: 15px;
         margin-top: 0px;
         margin-bottom: 5px;
         float: left;
+        padding-top: 7px;
         .small;
       }
 
@@ -52,4 +46,31 @@ header {
 }
 
 
+@media (min-width: @screen-md-min) {
+  header {
+    margin-bottom: 10px;
+    .container {
+      .app-name {
+        width: 230px;
+      }
+      .sub-header.small {
+        width: 230px;
+      }
+    }
+  }
 
+}
+@media (min-width: @screen-lg-min) {
+
+  header {
+    .container {
+      .app-name {
+        width: 315px;
+      }
+      .sub-header.small {
+        width: 315px;
+      }
+    }
+  }
+
+}

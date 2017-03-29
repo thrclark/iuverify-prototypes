@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-xs-10">
-                <h1 class="navbar-brand">IU Verify</h1>
+                   <h1 class="app-name">IU Verify</h1>
                 <div class="sub-header small">Verification Publishing</div>
             </div>
             <div class="col-sm-6 col-xs-2">
