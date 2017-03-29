@@ -1,19 +1,19 @@
 header {
   .container {
     padding-bottom: 15px;
-    .app-name {
-
-    }
-    .sub-header.small {
-      padding-top: 3px;
-    }
-    .dropdown.navbar-text {
-      .btn-link {
-        &:hover {
-          text-decoration: none;
-        }
-        &:focus {
-          text-decoration: none;
+    .row {
+      display: block;
+      .sub-header.small {
+        padding-top: 3px;
+      }
+      .dropdown.navbar-text {
+        .btn-link {
+          &:hover {
+            text-decoration: none;
+          }
+          &:focus {
+            text-decoration: none;
+          }
         }
       }
     }
@@ -25,21 +25,19 @@ header {
     //min-height: 75px;
     margin-bottom: 0px;
     .container {
-      .app-name {
-      }
-      .sub-header.small {
-      }
-      .navbar-text {
-        //margin-right: 15px;
-        //margin-left: 15px;
-        margin-top: 0px;
-        margin-bottom: 5px;
-        float: left;
-        padding-top: 7px;
-        .small;
-      }
+      .row {
+        flex-direction: inherit;
+        .navbar-text {
+          //margin-right: 15px;
+          //margin-left: 15px;
+          margin-top: 0px;
+          margin-bottom: 5px;
+          float: left;
+          padding-top: 7px;
+          .small;
+        }
 
-
+      }
     }
   }
 
