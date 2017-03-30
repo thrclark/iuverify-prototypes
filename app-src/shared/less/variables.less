@@ -1,20 +1,35 @@
 ///////// App styles set by user
 
+//Colors
+@header-background:             #163C50; // default #163C50  4C1213
+@header-container-background:   #163C50; // default #163C50  ffffff
+@bodybackground:                #ebebeb; // default #ebebeb  4C1213
+@maincontent-background:        #ebebeb; // default #ebebeb  ffffff
+@vfy-card-background:           #ffffff; // default #ffffff  ebebeb
+@horizonal-rules:               #cccccc; // default #ffffff  ebebeb
+@text-color:                    #555555; // default #555555
+@text-color-darkbkg:            #ffffff; // default #ffffff
+@link-color:                    #2879B8; // default #2879B8
+@btn-primary-bg:                #2879B8; // default #2879B8  990000
+@btn-default-bg:                #ffffff; // default #ffffff
+@border-radius-base:            0px;
+@border-radius-large:           0px;
+@border-radius-small:           0px;
 
-@header-background:         #163C50; // default #163C50  4C1213
+// Screen Width -  wide desktop
+@container-large-desktop:      (920px + @grid-gutter-width);
 
-@header-container-background:         #163C50; // default #163C50  ffffff
+// Screen Width -  small desktop
+@container-desktop:            (920px + @grid-gutter-width);
 
+// Screen Width - tablet
+@container-tablet:             (720px + @grid-gutter-width); // default (720px + @grid-gutter-width);
 
-@bodybackground:            #ebebeb; // default #ebebeb  4C1213
-@maincontent-background:    #ebebeb; // default #ebebeb  ffffff
-@vfy-card-background:       #ffffff; // default #ffffff  ebebeb
-@horizonal-rules:           #cccccc; // default #ffffff  ebebeb
-@text-color:                #555555; // default #555555
-@text-color-darkbkg:        #ffffff; // default #ffffff
-@link-color:                #2879B8; // default #2879B8
-@btn-primary-bg:            #2879B8; // default #2879B8  990000
-@btn-default-bg:            #ffffff; // default #ffffff
+//Content Padding
+@content-padding-left:          15px;
+@content-padding-right:         15px;
+@content-padding-top:           20px;
+@content-padding-bottom:        60px;
 
 
 
@@ -37,8 +52,6 @@ header {
 .app-name, .sub-header, header .container .dropdown.navbar-text .btn-link, .navbar-text {
   .contrast-headertextcolor(@header-container-background)
 }
-
-
 .contrast-bodytextcolor (@a) when (lightness(@a) >= 50%) {
   color: @text-color;
 }
@@ -48,12 +61,9 @@ header {
 .nav-side-menu li a, body {
   .contrast-bodytextcolor(@maincontent-background)
 }
-
 legend {
   .contrast-bodytextcolor(@vfy-card-background)
 }
-
-
 .contrast-welltextcolor (@a) when (lightness(@a) >= 50%) {
   color: @text-color;
 }
@@ -63,13 +73,9 @@ legend {
 .well, .primary-content {
   .contrast-welltextcolor(@vfy-card-background)
 }
-
 .btn-primary {
   .contrast-welltextcolor(@btn-primary-bg)
 }
-
-
-
 .btn-default {
   .contrast-welltextcolor(@btn-default-bg)
 }
@@ -94,25 +100,3 @@ legend {
 
 @text-muted:                #747474;
 
-
-
-@border-radius-base:        0px;
-@border-radius-large:       0px;
-@border-radius-small:       0px;
-
-
-
-//== Container sizes
-//
-//## Define the maximum width of `.container` for different screen sizes.
-
-// Large screen / wide desktop
-@container-large-desktop:      (920px + @grid-gutter-width);
-
-// Medium screen / desktop
-@container-desktop:            (920px + @grid-gutter-width);
-
-@content-padding-left:          15px;
-@content-padding-right:         15px;
-@content-padding-top:           20px;
-@content-padding-bottom:        60px;
