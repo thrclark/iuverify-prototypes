@@ -64,6 +64,7 @@ header .app-header h1 {
                             </li>
                             <li><a href="verify-loading.php" target="_blank">Example 5 (section loaders &amp; updated data)</a> </li>
                             <li><a href="verify-completed.php" target="_blank">Example 6 (verifications complete)</a> </li>
+                            <li><a href="verify-adminview.php" target="_blank">Example 7 (admin view of end user screen)</a></li>
                         </ul>
                         <h2 class="">Publishing/Admin Views </h2>
                         <ul>
