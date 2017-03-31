@@ -374,27 +374,6 @@ $page_title = 'app-styles';
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--  <div class="form-group custom-headerfont">
-                                    <label class="control-label custom-headerfont" for="backupfont">Backup Font </label>
-                                    <span class="help-block small">Select a font that will be used in the case that the custom font becomes unavailable.</span>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <select class="select form-control" id="backupfont" name="backupfont">
-                                                <option label="" value=""></option>
-                                                <option label="" value="">Sans-Serif - Arial, Helvetica </option>
-                                                <option label="" value="">Sans-Serif - "Arial Black", Gadget</option>
-                                                <option label="" value="">Sans-Serif - Impact, Charcoal </option>
-                                                <option label="" value="">Sans-Serif - "Lucida Sans Unicode", "Lucida Grande" </option>
-                                                <option label="" value="">Sans-Serif - Tahoma, Geneva </option>
-                                                <option label="" value="">Sans-Serif - "Trebuchet MS", Helvetica </option>
-                                                <option label="" value="">Sans-Serif - Verdana, Geneva </option>
-                                                <option label="" value="">Serif - Georgia</option>
-                                                <option label="" value="">Serif - "Palatino Linotype", "Book Antiqua", Palatino</option>
-                                                <option label="" value="">Serif - "Times New Roman", Times</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>-->
                                     </fieldset>
                                     <fieldset>
                                         <legend>Font for Body Text</legend>
@@ -519,32 +498,12 @@ $page_title = 'app-styles';
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="form-group custom-bodyfont">
-                                    <label class="control-label" for="backupfont">Backup Font </label>
-                                    <span class="help-block small">Select a font that will be used in the case that the custom font becomes unavailable.</span>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <select class="select form-control" id="backupfont" name="backupfont">
-                                                <option label="" value=""></option>
-                                                <option label="" value="">Sans-Serif - Arial, Helvetica </option>
-                                                <option label="" value="">Sans-Serif - "Arial Black", Gadget</option>
-                                                <option label="" value="">Sans-Serif - Impact, Charcoal </option>
-                                                <option label="" value="">Sans-Serif - "Lucida Sans Unicode", "Lucida Grande" </option>
-                                                <option label="" value="">Sans-Serif - Tahoma, Geneva </option>
-                                                <option label="" value="">Sans-Serif - "Trebuchet MS", Helvetica </option>
-                                                <option label="" value="">Sans-Serif - Verdana, Geneva </option>
-                                                <option label="" value="">Serif - Georgia</option>
-                                                <option label="" value="">Serif - "Palatino Linotype", "Book Antiqua", Palatino</option>
-                                                <option label="" value="">Serif - "Times New Roman", Times</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>-->
                                     </fieldset>
                                 </div>
                             </div>
                             <div class="text-right"> <a href="" class="btn btn-default" data-toggle="modal" data-target="#confirm_exit">Cancel</a>
-                                <button type="submit" class="btn btn-primary" id="" data-toggle="modal" data-target="#confirm_save">Save</button>
+                                <button type="submit" class="btn btn-primary" id="page_save" data-toggle="" data-target="">Save</button>
+                                <button type="submit" class="btn btn-primary" id="page_saving" data-toggle="" data-target="" disabled="disabled" style="display:none"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Saving</button>
                             </div>
                         </section>
                     </div>
@@ -553,6 +512,66 @@ $page_title = 'app-styles';
         </div>
     </div>
     <?php include ('includes/brand-footer.php') ?>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="page_refreshed" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog modal-default" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"><i class="icon-user-3"></i>Save Completed</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-content">
+                            <p>Your settings have been saved. In order to see the new styling, you will need to reload this page.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"> <a href="#" class="btn btn-default btn-sm" data-dismiss="modal" >Close</a> <a href="#" class="btn btn-primary btn-sm" data-dismiss="modal" >Reload Page</a> </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="confirm_exit" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog modal-default" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"><i class="icon-user-3"></i>Unsaved Changes</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-content">
+                            <p>There are unsaved changes on this page. Would you like to continue editing?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"> <a href="#" class="btn btn-default btn-sm" data-dismiss="modal" >Discard Changes</a> <a href="#" class="btn btn-primary btn-sm" data-dismiss="modal">Continue Editing</a> </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="confirm_save" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog modal-default" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title"><i class="icon-user-3"></i>Settings Saved</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <div class="message-content">
+                            <p>Your settings have been saved.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"> <a href="#" class="btn btn-default btn-sm" data-dismiss="modal" >Close</a> </div>
+            </div>
+        </div>
+    </div>
     <script type='text/javascript'>
 			//<![CDATA[
 			$( document ).ready( function () {
@@ -616,46 +635,18 @@ $page_title = 'app-styles';
 				} );
 			} ); //]]>
 		</script> 
-</div>
+    <script>
+    $("#page_save").click(function() {
+        $("#page_save").hide().delay(2000).slideDown(0);
+        $("#page_saving").show().delay(2000).slideUp(0);
+		
 
-<!-- Modal -->
-<div class="modal fade" id="confirm_exit" tabindex="-1" role="dialog" aria-labelledby="">
-    <div class="modal-dialog modal-default" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title"><i class="icon-user-3"></i>Unsaved Changes</h4>
-            </div>
-            <div class="modal-body">
-                <div class="message">
-                    <div class="message-content">
-                        <p>There are unsaved changes on this page. Would you like to continue editing?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer"> <a href="#" class="btn btn-default btn-sm" data-dismiss="modal" >Discard Changes</a> <a href="#" class="btn btn-primary btn-sm" data-dismiss="modal">Continue Editing</a> </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="confirm_save" tabindex="-1" role="dialog" aria-labelledby="">
-    <div class="modal-dialog modal-default" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title"><i class="icon-user-3"></i>Settings Saved</h4>
-            </div>
-            <div class="modal-body">
-                <div class="message">
-                    <div class="message-content">
-                        <p>Your settings have been saved.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer"> <a href="#" class="btn btn-default btn-sm" data-dismiss="modal" >Close</a> </div>
-        </div>
-    </div>
+        setTimeout(
+            function() {
+                $('#page_refreshed').modal();
+            }, 2000);
+    });
+</script> 
 </div>
 </body>
 </html>
