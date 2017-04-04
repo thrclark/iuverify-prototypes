@@ -1,5 +1,4 @@
 <?php $page_title = "Home" ?>
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
