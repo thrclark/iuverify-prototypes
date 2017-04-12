@@ -23,30 +23,6 @@ $page_title = 'app-styles';
 	border-left: none;
 	padding-left: 0px;
 }
-.layout-control {
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-	border: none;
-	background-color: #f5f5f5;
-	margin-top: 42px;
-	padding-top: 58px;
-}
-.layout-control .round {
-	display: inline-block;
-	background-color: #ffffff;
-	color: #163c50;
-	text-align: center;
-	height: 90px;
-	width: 90px;
-	line-height: 40px;
-	border-radius: 50%;
-	font-size: 46px;
-	border: solid 1px #cccccc;
-	padding: 21px;
-	position: absolute;
-	left: 32px;
-	top: 0px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 .padding-widget .form-control {
 	display: inline;
 	width: 70px;
@@ -230,9 +206,8 @@ $page_title = 'app-styles';
                                         <!---->
                                         
                                         <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget"> <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
-
-
+                                            <div class="well well-sm preview-widget hidden-xs">
+                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
                                             </div>
                                         </div>
                                         
@@ -248,30 +223,30 @@ $page_title = 'app-styles';
                                                 <p> Note that the settings on this page will only apply to the verification view, and not to the publishing and admin views.</p>
                                                 <p> <strong>Screen Sizes</strong></p>
                                                 <div class="row">
-                                                    <div class="col-sm-3">
+                                                    <div class="col-xs-12 col-sm-6 col-lg-3">
                                                         <div class="well well-sm text-center layout-control">
-                                                            <div class="round"> <i class="fa fa-desktop" aria-hidden="true" style="margin-left: -7px;margin-top: -4px;font-size: 58px;"></i> </div>
+                                                            <div class="round desktop-lg"> <i class="fa fa-desktop" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_lg"> Large</label>
                                                             <input id="width_lg" type="text" class="form-control text-center" value="950px">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-3">
+                                                    <div class="col-xs-12 col-sm-6 col-lg-3">
                                                         <div class="well well-sm text-center layout-control">
-                                                            <div class="round"> <i class="fa fa-desktop" aria-hidden="true" style="font-size: 42px;MARGIN-TOP: 5px;"></i> </div>
+                                                            <div class="round desktop-md"> <i class="fa fa-desktop" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_md"> Medium</label>
                                                             <input id="width_md" type="text" class="form-control text-center" value="950px">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-3">
+                                                    <div class="col-xs-12 col-sm-6 col-lg-3">
                                                         <div class="well well-sm text-center layout-control">
-                                                            <div class="round"> <i class="fa fa-tablet" aria-hidden="true"></i> </div>
+                                                            <div class="round tablet"> <i class="fa fa-tablet" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_sm"> Tablet</label>
                                                             <input id="width_sm" type="text" class="form-control text-center" value="750px">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-3">
+                                                    <div class="col-xs-12 col-sm-6 col-lg-3">
                                                         <div class="well well-sm text-center layout-control">
-                                                            <div class="round"> <i class="fa fa-mobile" aria-hidden="true"></i> </div>
+                                                            <div class="round mobile"> <i class="fa fa-mobile" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_xs">Mobile</label>
                                                             <input id="width_xs" type="text" class="form-control text-center" value="100%" disabled>
                                                         </div>
@@ -284,13 +259,13 @@ $page_title = 'app-styles';
                                                 <div class="row padding-widget" style="padding-top:40px">
                                                     <div class="col-xs-12 text-center">
                                                         <div class="form-group ">
-                                                            <label class="control-label" for="content_pad_top">Top</label>
+                                                            <label class="control-label small text-muted help-block" for="content_pad_top">Top</label>
                                                             <input id="content_pad_top" type="text" class="form-control" value="20px">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-3 text-right" style="padding-top: 80px;">
                                                         <div class="form-group ">
-                                                            <label class="control-label" for="content_pad_left"> Left</label>
+                                                            <label class="control-label small text-muted help-block" for="content_pad_left"> Left</label>
                                                             <input id="content_pad_left" type="text" class="form-control" value="15px">
                                                         </div>
                                                     </div>
@@ -301,13 +276,13 @@ $page_title = 'app-styles';
                                                     </div>
                                                     <div class="col-xs-3" style="padding-top: 80px;">
                                                         <div class="form-group ">
-                                                            <label class="control-label" for="content_pad_right"> Right</label>
+                                                            <label class="control-label small text-muted help-block" for="content_pad_right"> Right</label>
                                                             <input id="content_pad_right" type="text" class="form-control" value="15px">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 text-center">
                                                         <div class="form-group ">
-                                                            <label class="control-label" for="content_pad_bottom">Bottom</label>
+                                                            <label class="control-label small text-muted help-block" for="content_pad_bottom">Bottom</label>
                                                             <input id="content_pad_bottom" type="text" class="form-control" value="60px">
                                                         </div>
                                                     </div>
@@ -315,7 +290,7 @@ $page_title = 'app-styles';
                                             </fieldset>
                                         </div>
                                         <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget">
+                                            <div class="well well-sm preview-widget hidden-xs">
                                                 <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
                                             </div>
                                         </div>
@@ -356,7 +331,7 @@ $page_title = 'app-styles';
                                             </fieldset>
                                         </div>
                                         <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget">
+                                            <div class="well well-sm preview-widget hidden-xs">
                                                 <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
                                             </div>
                                         </div>
@@ -371,19 +346,19 @@ $page_title = 'app-styles';
                                                     <label class="control-label " for="headerfont">Font Face </label>
                                                     <span class="help-block small">Select a font that will be used for all headers.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select class="select form-control" id="headerfont" name="headerfont">
                                                                 <option label="" value=""></option>
-                                                                <option label="" value="">Sans-Serif - Arial, Helvetica </option>
-                                                                <option label="" value="">Sans-Serif - "Arial Black", Gadget</option>
-                                                                <option label="" value="">Sans-Serif - Impact, Charcoal </option>
-                                                                <option label="" value="">Sans-Serif - "Lucida Sans Unicode", "Lucida Grande" </option>
-                                                                <option label="" value="">Sans-Serif - Tahoma, Geneva </option>
-                                                                <option label="" value="">Sans-Serif - "Trebuchet MS", Helvetica </option>
-                                                                <option label="" value="">Sans-Serif - Verdana, Geneva </option>
-                                                                <option label="" value="">Serif - Georgia</option>
-                                                                <option label="" value="">Serif - "Palatino Linotype", "Book Antiqua", Palatino</option>
-                                                                <option label="" value="">Serif - "Times New Roman", Times</option>
+                                                                <option label="" value="Arial, Helvetica, sans-serif">Sans-Serif - Arial, Helvetica </option>
+                                                                <option label="" value="'Arial Black', Gadget, sans-serif">Sans-Serif - "Arial Black", Gadget</option>
+                                                                <option label="" value="Impact, Charcoal, sans-serif">Sans-Serif - Impact, Charcoal </option>
+                                                                <option label="" value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Sans-Serif - "Lucida Sans Unicode", "Lucida Grande" </option>
+                                                                <option label="" value="Tahoma, Geneva, sans-serif">Sans-Serif - Tahoma, Geneva </option>
+                                                                <option label="" value="'Trebuchet MS', Helvetica, sans-serif">Sans-Serif - "Trebuchet MS", Helvetica </option>
+                                                                <option label="" value="Verdana, Geneva, sans-serif">Sans-Serif - Verdana, Geneva </option>
+                                                                <option label="" value="Georgia, serif">Serif - Georgia</option>
+                                                                <option label="" value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Serif - "Palatino Linotype", "Book Antiqua", Palatino</option>
+                                                                <option label="" value="'Times New Roman', Times, serif">Serif - "Times New Roman", Times</option>
                                                                 <option label="" value="">------</option>
                                                                 <option label="" value="usecustomfont">Use Custom Font</option>
                                                             </select>
@@ -394,7 +369,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_family"> Font Family Name</label>
                                                     <span class="help-block small">Specify the name of this custom font.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <input class="form-control" id="font_family" name="font_family" type="text" required="required">
                                                         </div>
                                                     </div>
@@ -403,7 +378,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_family"> Weight</label>
                                                     <span class="help-block small">Specify the weight of this custom font.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select ng-model="fontFace.fontWeight" name="fontFaces[0].fontWeight" id="fontFaces[0].fontWeight" ng-options="format.value as format.displayValue for format in ::brandCtrl.pageData.fontWeights" class="form-control ng-pristine ng-valid ng-not-empty ng-touched" aria-invalid="false">
                                                                 <option label="normal" value="string:NORMAL" selected="selected">normal</option>
                                                                 <option label="bold" value="string:BOLD">bold</option>
@@ -424,7 +399,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_family"> Style</label>
                                                     <span class="help-block small">Specify the style of this custom font.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select ng-model="fontFace.fontStyle" name="fontFaces[0].fontStyle" id="fontFaces[0].fontStyle" ng-options="format.value as format.displayValue for format in ::brandCtrl.pageData.fontStyles" class="form-control ng-pristine ng-valid ng-not-empty ng-touched" aria-invalid="false">
                                                                 <option label="normal" value="string:NORMAL" selected="selected">normal</option>
                                                                 <option label="italic" value="string:ITALIC">italic</option>
@@ -437,7 +412,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_family"> Stretch</label>
                                                     <span class="help-block small">Specify the stretch of this custom font..</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select ng-model="fontFace.fontStretch" name="fontFaces[0].fontStretch" id="fontFaces[0].fontStretch" ng-options="format.value as format.displayValue for format in ::brandCtrl.pageData.fontStretches" class="form-control ng-pristine ng-valid ng-not-empty ng-touched" aria-invalid="false">
                                                                 <option label="normal" value="string:NORMAL" selected="selected">normal</option>
                                                                 <option label="condensed" value="string:CONDENSED">condensed</option>
@@ -495,19 +470,19 @@ $page_title = 'app-styles';
                                                     <label class="control-label " for="bodyfont">Font Face </label>
                                                     <span class="help-block small">Select a font that will be used for the body.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select class="select form-control" id="bodyfont" name="bodyfont">
                                                                 <option label="" value=""></option>
-                                                                <option label="" value="">Sans-Serif - Arial, Helvetica </option>
-                                                                <option label="" value="">Sans-Serif - "Arial Black", Gadget</option>
-                                                                <option label="" value="">Sans-Serif - Impact, Charcoal </option>
-                                                                <option label="" value="">Sans-Serif - "Lucida Sans Unicode", "Lucida Grande" </option>
-                                                                <option label="" value="">Sans-Serif - Tahoma, Geneva </option>
-                                                                <option label="" value="">Sans-Serif - "Trebuchet MS", Helvetica </option>
-                                                                <option label="" value="">Sans-Serif - Verdana, Geneva </option>
-                                                                <option label="" value="">Serif - Georgia</option>
-                                                                <option label="" value="">Serif - "Palatino Linotype", "Book Antiqua", Palatino</option>
-                                                                <option label="" value="">Serif - "Times New Roman", Times</option>
+                                                                <option label="" value="Arial, Helvetica, sans-serif">Sans-Serif - Arial, Helvetica </option>
+                                                                <option label="" value="'Arial Black', Gadget, sans-serif">Sans-Serif - "Arial Black", Gadget</option>
+                                                                <option label="" value="Impact, Charcoal, sans-serif">Sans-Serif - Impact, Charcoal </option>
+                                                                <option label="" value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Sans-Serif - "Lucida Sans Unicode", "Lucida Grande" </option>
+                                                                <option label="" value="Tahoma, Geneva, sans-serif">Sans-Serif - Tahoma, Geneva </option>
+                                                                <option label="" value="'Trebuchet MS', Helvetica, sans-serif">Sans-Serif - "Trebuchet MS", Helvetica </option>
+                                                                <option label="" value="Verdana, Geneva, sans-serif">Sans-Serif - Verdana, Geneva </option>
+                                                                <option label="" value="Georgia, serif">Serif - Georgia</option>
+                                                                <option label="" value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Serif - "Palatino Linotype", "Book Antiqua", Palatino</option>
+                                                                <option label="" value="'Times New Roman', Times, serif">Serif - "Times New Roman", Times</option>
                                                                 <option label="" value="">------</option>
                                                                 <option label="" value="usecustomfont">Use Custom Font</option>
                                                             </select>
@@ -518,7 +493,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_family_body"> Font Family Name</label>
                                                     <span class="help-block small">Specify the name of this custom font.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <input class="form-control" id="font_family_body" name="font_family_body" type="text" required="required">
                                                         </div>
                                                     </div>
@@ -527,7 +502,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_weight_body"> Weight</label>
                                                     <span class="help-block small">Specify the weight of this custom font.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select ng-model="fontFace.fontWeight" name="fontFaces[0].fontWeight" id="font_weight_body" ng-options="format.value as format.displayValue for format in ::brandCtrl.pageData.fontWeights" class="form-control ng-pristine ng-valid ng-not-empty ng-touched" aria-invalid="false">
                                                                 <option label="normal" value="string:NORMAL" selected="selected">normal</option>
                                                                 <option label="bold" value="string:BOLD">bold</option>
@@ -548,7 +523,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_style_body"> Style</label>
                                                     <span class="help-block small">Specify the style of this custom font.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select ng-model="fontFace.fontStyle" name="fontFaces[0].fontStyle" id="font_style_body" ng-options="format.value as format.displayValue for format in ::brandCtrl.pageData.fontStyles" class="form-control ng-pristine ng-valid ng-not-empty ng-touched" aria-invalid="false">
                                                                 <option label="normal" value="string:NORMAL" selected="selected">normal</option>
                                                                 <option label="italic" value="string:ITALIC">italic</option>
@@ -561,7 +536,7 @@ $page_title = 'app-styles';
                                                     <label class="control-label" for="font_stretch_body"> Stretch</label>
                                                     <span class="help-block small">Specify the stretch of this custom font.</span>
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col-sm-9">
                                                             <select ng-model="fontFace.fontStretch" name="fontFaces[0].fontStretch" id="font_stretch_body" ng-options="format.value as format.displayValue for format in ::brandCtrl.pageData.fontStretches" class="form-control ng-pristine ng-valid ng-not-empty ng-touched" aria-invalid="false">
                                                                 <option label="normal" value="string:NORMAL" selected="selected">normal</option>
                                                                 <option label="condensed" value="string:CONDENSED">condensed</option>
@@ -615,7 +590,7 @@ $page_title = 'app-styles';
                                             </fieldset>
                                         </div>
                                         <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget">
+                                            <div class="well well-sm preview-widget hidden-xs">
                                                 <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
                                             </div>
                                         </div>
@@ -903,20 +878,27 @@ $page_title = 'app-styles';
         $("#modal_wysiwyg_preview .btn-lg").css('border-radius', $(this).val());
     });
 	
+	
+	
+	$("#headerfont").change(function() {
+        $("#modal_wysiwyg_preview .app-name, #modal_wysiwyg_preview .h4").css('font-family', $(this).val());
+    });
+	
+	
+	
+	$("#bodyfont").change(function() {
+        $("#modal_wysiwyg_preview").css('font-family', $(this).val());
+    });
+	
 </script> 
-
-
-<script>
+    <script>
     $(document).ready(function() {
         $(".preview-widget").sticky({
             topSpacing: 20
         });
     });
-</script>
-
-
-
-<script>
+</script> 
+    <script>
     $(document).ready(function() {
         $('.nav.nav-tabs a').click(function(e) {
             e.preventDefault()
@@ -927,18 +909,7 @@ $page_title = 'app-styles';
 			 $('.preview-widget').css('width', '290px'); 
         })
     });
-</script>
-
-
-
- 
-                          
-                            
-
-
-
-
-
+</script> 
 </div>
 </body>
 </html>
