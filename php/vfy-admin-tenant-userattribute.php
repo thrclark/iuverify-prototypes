@@ -63,49 +63,49 @@ $page_title = 'tenant-userattribute';
                                         <td >mail</td>
                                         <td >Default</td>
                                         <td >Inactive</td>
-                                        <td><a class="btn btn-default btn-xs" href="#">Edit</a></td>
+                                        <td><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#edit_mapping">Edit</a></td>
                                     </tr>
                                     <tr>
                                         <td >First Name</td>
                                         <td >givenName</td>
                                         <td >Default</td>
                                         <td >Inactive</td>
-                                        <td><a class="btn btn-default btn-xs" href="#">Edit</a></td>
+                                        <td><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#edit_mapping">Edit</a></td>
                                     </tr>
                                     <tr>
                                         <td >Groups</td>
                                         <td ></td>
                                         <td >Default</td>
                                         <td >Inactive</td>
-                                        <td><a class="btn btn-default btn-xs" href="#">Edit</a></td>
+                                        <td><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#edit_mapping">Edit</a></td>
                                     </tr>
                                     <tr>
                                         <td >Last Name</td>
                                         <td >sn</td>
                                         <td >Default</td>
                                         <td >Inactive</td>
-                                        <td><a class="btn btn-default btn-xs" href="#">Edit</a></td>
+                                        <td><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#edit_mapping">Edit</a></td>
                                     </tr>
                                     <tr>
                                         <td >Person ID</td>
                                         <td >iuEduPSEMPLID</td>
                                         <td >Default</td>
                                         <td >Active</td>
-                                        <td><a class="btn btn-default btn-xs" href="#">Edit</a></td>
+                                        <td><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#edit_mapping">Edit</a></td>
                                     </tr>
                                     <tr>
                                         <td >Roles</td>
                                         <td >eduPersonAffiliation</td>
                                         <td >Default</td>
                                         <td >Inactive</td>
-                                        <td><a class="btn btn-default btn-xs" href="#">Edit</a></td>
+                                        <td><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#edit_mapping">Edit</a></td>
                                     </tr>
                                     <tr>
                                         <td >User Name</td>
                                         <td >sAMAccountName</td>
                                         <td >Default</td>
                                         <td >Active</td>
-                                        <td><a class="btn btn-default btn-xs" href="#">Edit</a></td>
+                                        <td><a class="btn btn-default btn-xs" href="#" data-toggle="modal" data-target="#edit_mapping">Edit</a></td>
                                     </tr>
                                     <tr>
                                         <td >Custom 1</td>
@@ -155,7 +155,7 @@ $page_title = 'tenant-userattribute';
             <div class="modal-body">
                 <form>
                     <div class="form-group" >
-                        <label class="control-label" for="name"> Local Application Key </label>
+                        <label class="control-label" for="name"> Local Application Keyyy </label>
                         <div class="row">
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" placeholder="">
@@ -192,6 +192,68 @@ $page_title = 'tenant-userattribute';
         </div>
     </div>
 </div>
+<div class="modal fade" id="edit_mapping" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-default" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title"><i class="icon-user-3"></i>Edit Person ID</h4>
+            </div>
+            <div class="modal-body" id="page1" style="display:block">
+                <form>
+                    <div class="form-group" >
+                        <label class="control-label" for="name"> Remote Data Source Key </label>
+                        <span class="help-block small">Enter your attribute name for a user's unique id. (This can be any characters that are unique to a user at your institution and doesn't change for a user).</span>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <label class="control-label" for="name"> Status </label>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <select ng-model="attributeMappingCtrl.mapping.status" id="status" name="status"  class="form-control" required="" aria-invalid="false">
+                                    <option label="Active" value="string:ACTIVE">Active</option>
+                                    <option label="Inactive" value="string:INACTIVE" selected="selected">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-body" id="page2" style="display:none">
+                <p> <strong>Confirm Save User Attribute Mapping</strong></p>
+                <p>Do you want to reset the users for this tenant? If the user's Person ID or User Name is now different for this tenant you must reset the users. Resetting the users will delete all user information within the application. If you fail to do so, users will likely not be able to login. </p>
+                <p>User Attribute Mapping: Person ID </p>
+            </div>
+            <div class="modal-footer" id="modalfooter1" style="display:block">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary btn-sm" id="save1">Save...</button>
+            </div>
+            <div class="modal-footer" id="modalfooter2" style="display:none">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" id="save2">Save &amp; Reset Users</button>
+                 <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal" id="save3">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#save1").click(function() {
+            $("#page1, #modalfooter1").hide();
+            $("#page2, #modalfooter2").show();
+        });
+
+
+        $("#save2, #save3").click(function() {
+            $("#page1, #modalfooter1").show();
+            $("#page2, #modalfooter2").hide();
+        });
+    });
+</script>
 <script type="text/javascript">
     //<![CDATA[
     $(window).load(function() {
@@ -206,7 +268,7 @@ $page_title = 'tenant-userattribute';
             });
         });
     }); //]]>
-</script>
+</script> 
 <script type="text/javascript">
     //<![CDATA[
     $(window).load(function() {
