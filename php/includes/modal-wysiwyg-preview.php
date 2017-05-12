@@ -9,8 +9,8 @@
             </div>
             <div class="modal-body" style="padding:40px; padding-top:20px;background:#EBEBEB" id="wyswyg_body">
                 <div id="wyswyg_header" style="position:;height: 50px;background: #163C50;width: 100%;margin-left:;z-index: 0;"> </div>
-                <div class="container" style="width:950px">
-                    <div class="row" style="margin-bottom: 20px;margin-top: -48px;" >
+                <div class="container" style="width:950px;padding-bottom: 50px;">
+                    <div class="row" style="margin-bottom: 20px;margin-top: -50px;" >
                         <div class="col-sm-8 col-xs-12" id="wyswyg_headercont1">
                             <h1 class="app-name" style="padding-top: 7px;padding-bottom: 0;font-size: 28px;line-height: 28px;margin: 0;padding-left: 0;height: 50px;z-index:9999999">IU Verify</h1>
                         </div>
@@ -74,8 +74,8 @@
                 </div>
             </div>
             <div class="modal-footer" style="background:#ffffff;">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Continue Editing</button>   <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-            </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Continue Editing</button>
+                <a href="#" class="btn btn-primary" id="page_save" data-toggle="" data-target="#">Save</a> <a href="#" class="btn btn-primary" id="page_saving" data-toggle="" data-target="" disabled="disabled" style="display:none"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Saving</a> </div>
         </div>
     </div>
 </div>

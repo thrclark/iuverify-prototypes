@@ -58,7 +58,7 @@ $page_title = 'app-styles';
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="colors">
                                     <div class="row">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-12">
                                             <fieldset>
                                                 <legend>Background Colors</legend>
                                                 <div class="form-group" id="">
@@ -202,22 +202,11 @@ $page_title = 'app-styles';
                                                 </div>
                                             </fieldset>
                                         </div>
-                                        
-                                        <!---->
-                                        
-                                        <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview &amp; Save</button>
-                                            </div>
-                                        </div>
-                                        
-                                        <!----> 
-                                        
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="layout">
                                     <div class="row">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-12">
                                             <fieldset>
                                                 <legend>Page Width</legend>
                                                 <p> Note that the settings on this page will only apply to the verification view, and not to the publishing and admin views.</p>
@@ -289,16 +278,11 @@ $page_title = 'app-styles';
                                                 </div>
                                             </fieldset>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview">Preview &amp; Save</button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="radius">
                                     <div class="row">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-12">
                                             <fieldset>
                                                 <legend>Border Radius</legend>
                                                 <div class="form-group ">
@@ -330,16 +314,11 @@ $page_title = 'app-styles';
                                                 </div>
                                             </fieldset>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview">Preview &amp; Save</button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 <div role="tabpanel" class="tab-pane" id="fonts">
                                     <div class="row">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-12">
                                             <fieldset>
                                                 <legend>Font for Headers</legend>
                                                 <div class="form-group ">
@@ -589,18 +568,10 @@ $page_title = 'app-styles';
                                                 </div>
                                             </fieldset>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview">Preview &amp; Save</button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-right"> <a href="" class="btn btn-default" data-toggle="modal" data-target="#confirm_exit">Cancel</a>
-                                <button type="submit" class="btn btn-primary" id="page_save" data-toggle="" data-target="">Save</button>
-                                <button type="submit" class="btn btn-primary" id="page_saving" data-toggle="" data-target="" disabled="disabled" style="display:none"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> Saving</button>
-                            </div>
+                            <div class="text-right"> <a href="" class="btn btn-default" data-toggle="modal" data-target="#confirm_exit">Cancel</a> <a href="" class="btn btn-primary" data-toggle="modal" data-target="#modal_wysiwyg_preview">Preview &amp; Save</a> </div>
                         </section>
                     </div>
                 </div>
@@ -625,7 +596,7 @@ $page_title = 'app-styles';
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer"> <a href="#" class="btn btn-default btn-sm" data-dismiss="modal" >Close</a> <a href="#" class="btn btn-primary btn-sm" data-dismiss="modal" >Reload Page</a> </div>
+                <div class="modal-footer"> <a href="#" class="btn btn-default btn-sm" data-dismiss="modal" >Close</a> <a href="vfy-pub-branding-appstyles.php" class="btn btn-primary btn-sm"  >Reload Page</a> </div>
             </div>
         </div>
     </div>
@@ -734,14 +705,15 @@ $page_title = 'app-styles';
 </script> 
     <script>
     $("#page_save").click(function() {
-        $("#page_save").hide().delay(2000).slideDown(0);
-        $("#page_saving").show().delay(2000).slideUp(0);
+        $("#page_save").hide().delay(4000).slideDown(0);
+        $("#page_saving").show().delay(4000).slideUp(0);
 
 
         setTimeout(
             function() {
+				$('#modal_wysiwyg_preview').modal('hide');
                 $('#page_refreshed').modal();
-            }, 2000);
+            }, 4000);
     });
 </script> 
     <script>
