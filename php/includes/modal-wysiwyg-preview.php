@@ -1,30 +1,18 @@
 <!-- Modal -->
 
 <div class="modal fade" id="modal_wysiwyg_preview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-lg" role="document" style="width:1200px">
+    <div class="modal-dialog modal-lg modal-default" role="document" style="width:1200px">
         <div class="modal-content">
-            <div class="modal-header" style="background:#ffffff">
+            <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Preview Styling</h4>
             </div>
-         
-                <div class="modal-body" style="padding:40px; padding-top:0px;background:#EBEBEB" id="wyswyg_body">
-                    <div id="wyswyg_header" style="position: absolute;
-    height: 50px;
-    background: #163C50;
-    width: 100%;
-    margin-left: -40px;
-    z-index: 0;"> </div>
-                  <div class="container" style="width:950px">  <div class="row" style="margin-bottom: 20px;" >
+            <div class="modal-body" style="padding:40px; padding-top:20px;background:#EBEBEB" id="wyswyg_body">
+                <div id="wyswyg_header" style="position:;height: 50px;background: #163C50;width: 100%;margin-left:;z-index: 0;"> </div>
+                <div class="container" style="width:950px">
+                    <div class="row" style="margin-bottom: 20px;margin-top: -48px;" >
                         <div class="col-sm-8 col-xs-12" id="wyswyg_headercont1">
-                            <h1 class="app-name" style="    padding-top: 7px;
-    padding-bottom: 0;
-    font-size: 28px;
-    line-height: 28px;
-    margin: 0;
-    padding-left: 0;
-    height: 50px;
-    z-index:9999999">IU Verify</h1>
+                            <h1 class="app-name" style="padding-top: 7px;padding-bottom: 0;font-size: 28px;line-height: 28px;margin: 0;padding-left: 0;height: 50px;z-index:9999999">IU Verify</h1>
                         </div>
                         <div class="col-sm-4 col-xs-12" id="wyswyg_headercont2">
                             <p class="navbar-text"><i class="icon-user-3"></i><span class="sr-only">User: </span>Hello, Tom </p>
@@ -43,10 +31,10 @@
                             </div>
                             <div class="col-xs-6" style="padding-top:10px"> 
                                 <!--  <div class="dropdown pull-right"> <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Help <span class="caret"></span> </a>
-                        <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
-                            <li><a href="#">Assistive Technology at IU</a></li>
-                        </ul>
-                    </div>--> 
+<ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+<li><a href="#">Assistive Technology at IU</a></li>
+</ul>
+</div>--> 
                             </div>
                         </div>
                         <p>Section description lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. This is a <a href="#">test link</a> ociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
@@ -82,12 +70,11 @@
                                 <button class="btn btn-lg btn-primary" id="submit"> Submit</button>
                             </div>
                         </div>
-                    </div></div>
+                    </div>
                 </div>
-           
+            </div>
             <div class="modal-footer" style="background:#ffffff;">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-               
+                <button type="button" class="btn btn-default" data-dismiss="modal">Continue Editing</button>   <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
             </div>
         </div>
     </div>

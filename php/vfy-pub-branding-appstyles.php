@@ -207,7 +207,7 @@ $page_title = 'app-styles';
                                         
                                         <div class="col-sm-4">
                                             <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
+                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview &amp; Save</button>
                                             </div>
                                         </div>
                                         
@@ -291,7 +291,7 @@ $page_title = 'app-styles';
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
+                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview">Preview &amp; Save</button>
                                             </div>
                                         </div>
                                     </div>
@@ -332,7 +332,7 @@ $page_title = 'app-styles';
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
+                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview">Preview &amp; Save</button>
                                             </div>
                                         </div>
                                     </div>
@@ -591,7 +591,7 @@ $page_title = 'app-styles';
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="well well-sm preview-widget hidden-xs">
-                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview"> Preview </button>
+                                                <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_wysiwyg_preview">Preview &amp; Save</button>
                                             </div>
                                         </div>
                                     </div>
