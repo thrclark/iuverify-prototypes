@@ -18,3 +18,4 @@
 <script type="text/javascript" src="../js/multiselect.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap-slider.js"></script>
 <script type="text/javascript" src="../js/jscolor.js"></script>
+<script type="text/javascript" src="../js/jquery.sticky.js"></script> 
