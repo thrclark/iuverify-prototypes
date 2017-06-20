@@ -213,28 +213,30 @@ $page_title = 'app-styles';
                                                 <p> <strong>Screen Sizes</strong></p>
                                                 <div class="row">
                                                     <div class="col-xs-12 col-sm-6 col-lg-3">
-                                                        <div class="well well-sm text-center layout-control">
+                                                        <div class="well well-sm text-center layout-control form-group form-group-error">
                                                             <div class="round desktop-lg"> <i class="fa fa-desktop" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_lg"> Large</label>
                                                             <input id="width_lg" type="text" class="form-control text-center" value="950px">
+                                                            <div class="validation-fieldmessage" field="name"> <i class="fa fa-minus-circle" aria-hidden="true"></i> Message goes here </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6 col-lg-3">
-                                                        <div class="well well-sm text-center layout-control">
+                                                        <div class="well well-sm text-center layout-control form-group form-group-error">
                                                             <div class="round desktop-md"> <i class="fa fa-desktop" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_md"> Medium</label>
                                                             <input id="width_md" type="text" class="form-control text-center" value="950px">
+                                                            <div class="validation-fieldmessage" field="name"> <i class="fa fa-minus-circle" aria-hidden="true"></i> Message goes here </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6 col-lg-3">
-                                                        <div class="well well-sm text-center layout-control">
+                                                        <div class="well well-sm text-center layout-control form-group">
                                                             <div class="round tablet"> <i class="fa fa-tablet" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_sm"> Tablet</label>
                                                             <input id="width_sm" type="text" class="form-control text-center" value="750px">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-12 col-sm-6 col-lg-3">
-                                                        <div class="well well-sm text-center layout-control">
+                                                        <div class="well well-sm text-center layout-control form-group">
                                                             <div class="round mobile"> <i class="fa fa-mobile" aria-hidden="true"></i> </div>
                                                             <label class="control-label small text-muted" for="width_xs">Mobile</label>
                                                             <input id="width_xs" type="text" class="form-control text-center" value="100%" disabled>
@@ -247,10 +249,8 @@ $page_title = 'app-styles';
                                                 <p> Specify the amount of padding for the main content section of a verification screen (does not apply to publishing/admin screens)</p>
                                                 <div class="row padding-widget" style="padding-top:40px">
                                                     <div class="col-xs-12 text-center">
-                                                        <div class="form-group ">
-                                                            <label class="control-label small text-muted help-block" for="content_pad_top">Top</label>
-                                                            <input id="content_pad_top" type="text" class="form-control" value="20px">
-                                                        </div>
+                                                        <label class="control-label small text-muted help-block" for="content_pad_top">Top</label>
+                                                        <input id="content_pad_top" type="text" class="form-control" value="20px">
                                                     </div>
                                                     <div class="col-xs-3 text-right" style="padding-top: 80px;">
                                                         <div class="form-group ">
