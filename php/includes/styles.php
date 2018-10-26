@@ -11,6 +11,11 @@
 	z-index: 10;
 	top: 30%;
 }
+
+.blur {
+	filter: blur(4px);
+}
+
 </style>
 
 
