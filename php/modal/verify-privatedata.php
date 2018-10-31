@@ -15,7 +15,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary btn-sm reveal" data-dismiss="modal">Reveal sensitive data</button>
-                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" onclick="alert('Verification is now deferred, and user is redirected to application.');">Skip for now</button>
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Skip for now</button>
             </div>
         </div>
     </div>
