@@ -22,7 +22,7 @@
     <?php include ('includes/header2.php') ?>
     <div class="main-content container" role="main">
         <div id="main-content">
-            <?php include ('includes/instructions-top.php') ?>
+            	
             <div class="alert alert-warning" role="alert" style="margin-bottom:0px"><strong style="margin-bottom:1rem; display:block">Privacy note</strong>
                 <p>This page contains items of personally sensitive data, and are hidden to protect your privacy. Please unmask these fields to continue with your verification.</p>
                 <button class="btn btn-xs btn-primary reveal" style="margin-top:1rem">Unmask sensitive data</button>
