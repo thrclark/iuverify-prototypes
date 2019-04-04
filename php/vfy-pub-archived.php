@@ -50,7 +50,7 @@ $page_title = 'archived';
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchstatus" class="ng-scope">
+                                    <tr class="ng-scope">
                                         <td>Campus Access Code Agreement</td>
                                         <td>2015-03-15</td>
                                         <td class="text-center"><a href="#" class="btn btn-xs btn-default">Unarchive</a><!--<div class="dropdown">
@@ -62,7 +62,7 @@ $page_title = 'archived';
                                             </ul>
                                         </div>--></td>
                                     </tr>
-                                    <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchstatus" class="ng-scope">
+                                    <tr class="ng-scope">
                                         <td>Citizenship - Test</td>
                                         <td>2015-04-04</td>
                                         <td class="text-center"><a href="#" class="btn btn-xs btn-default">Unarchive</a><!--<div class="dropdown">
@@ -74,7 +74,7 @@ $page_title = 'archived';
                                             </ul>
                                         </div>--></td>
                                     </tr>
-                                    <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchstatus" class="ng-scope">
+                                    <tr class="ng-scope">
                                         <td>Direct Deposit Consent</td>
                                         <td>2015-02-02</td>
                                         <td class="text-center"><a href="#" class="btn btn-xs btn-default">Unarchive</a><!--<div class="dropdown">
@@ -86,7 +86,7 @@ $page_title = 'archived';
                                             </ul>
                                         </div>--></td>
                                     </tr>
-                                    <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchstatus" class="ng-scope">
+                                    <tr class="ng-scope">
                                         <td>FS - Tax Information</td>
                                         <td>2015-05-18</td>
                                         <td class="text-center"><a href="#" class="btn btn-xs btn-default">Unarchive</a><!--<div class="dropdown">
@@ -98,7 +98,7 @@ $page_title = 'archived';
                                             </ul>
                                         </div>--></td>
                                     </tr>
-                                    <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchstatus" class="ng-scope">
+                                    <tr class="ng-scope">
                                         <td>Manditory Health Screening</td>
                                         <td>2015-03-18</td>
                                         <td class="text-center"><a href="#" class="btn btn-xs btn-default">Unarchive</a><!--<div class="dropdown">

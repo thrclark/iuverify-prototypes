@@ -45,7 +45,7 @@ $page_title = 'home';
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchstatus">
+                                    <tr>
                                         <td>{{ roll.name }}</td>
                                         <td>{{ roll.status }}</td>
                                         <td>{{ roll.created }}</td>

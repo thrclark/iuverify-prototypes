@@ -215,7 +215,7 @@ $page_title = 'tenant-userattribute';
                         <label class="control-label" for="name"> Status </label>
                         <div class="row">
                             <div class="col-sm-6">
-                                <select ng-model="attributeMappingCtrl.mapping.status" id="status" name="status"  class="form-control" required="" aria-invalid="false">
+                                <select ng-model="attributeMappingCtrl.mapping.status" id="status" name="status"  class="form-control" required aria-invalid="false">
                                     <option label="Active" value="string:ACTIVE">Active</option>
                                     <option label="Inactive" value="string:INACTIVE" selected="selected">Inactive</option>
                                 </select>
