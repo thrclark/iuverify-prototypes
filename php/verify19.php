@@ -22,12 +22,18 @@
     <?php include ('includes/header2.php') ?>
     <div class="main-content container" role="main">
         <div id="main-content">
-            	
-            <div class="alert alert-warning" role="alert" style="margin-bottom:0px"><strong style="margin-bottom:1rem; display:block">Privacy note</strong>
+            <div class="alert alert-warning" role="alert" style="margin-bottom:15px"><strong style="margin-bottom:1rem; display:block">Privacy note</strong>
                 <p>This page contains items of personally sensitive data, and are hidden to protect your privacy. Please unmask these fields to continue with your verification.</p>
                 <button class="btn btn-xs btn-primary reveal" style="margin-top:1rem">Unmask sensitive data</button>
                 <button class="btn btn-xs btn-default" id="skipfornow" style="margin-top:1rem" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
                 <button class="btn btn-xs btn-default hidedata" style="margin-top:1rem; display:none">Hide sensitive data</button>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h4" style="margin-top:0px">Verify Your Data</h2>
+                    <p> On occasion, Indiana University requires verification of personal information regarding your affiliation with the university. The item(s) presented on this page have been marked as needing your review for accuracy. </p>
+                    <p>This is an additional, optional paragraph that may be customized as needed. This paragraph can include <a href="#">links</a> that could take the user to help content, or <a href="#">contact information</a>. </p>
+                </div>
             </div>
             <div class="well vfy-section ng-scope" style="">
                 <div class="row">
@@ -174,10 +180,7 @@
                     <div class="col-md-12 text-center" style="padding-bottom:15px; padding-top:15px;">
                         <button class="btn btn-lg btn-primary" id="submit1_0" data-toggle="" data-target="" disabled style="display:none"> Submit</button>
                         <button class="btn btn-lg btn-primary" id="submit1_1" data-toggle="" data-target=""  style="display:"> Unmask sensitive data</button>
-                        
-                      <button class="btn btn-lg btn-default" id="skipfornow2" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
-                        
-                        
+                        <button class="btn btn-lg btn-default" id="skipfornow2" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
                         <button class="btn btn-lg btn-primary" id="submit1_2" data-toggle="" data-target="" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');"  style="display:none"> Submit</button>
                     </div>
                 </div>
@@ -203,7 +206,6 @@
 </div>
 <?php include ('includes/brand-footer.php') ?>
 <?php include ('modal/verify-error.php') ?>
-
 <script>
     $(document).ready(function() {
         $(".edit-group").click(function() {
