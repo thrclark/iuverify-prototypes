@@ -186,6 +186,14 @@ $page_title = 'create-new';
                                                                         <span class="help-block small" > Provide an optional description of this data to be displayed with the verification.</span>
                                                                         <textarea class="form-control text-formatter" cols="40" id="section_description" name="message" rows="3"></textarea>
                                                                     </div>
+                                                                   
+                                                                    <div class="form-group">
+                                                                        <label id="section0.sensitiveLabel" for="verificationSections[0].sensitive" class="control-label">Sensitive Data</label>
+                                                                        <div> <label id="section0.sensitiveDirections" class="help-block small">
+                                                                            <input type="checkbox" id="verificationSections[0].sensitive" ng-model="verificationSection.sensitive" aria-labelledby="section0.sensitiveLabel section0.sensitiveDirections">
+                                                                            Mask the data presented in this section until the user takes action to unmask it.</label></div>
+                                                                    </div>
+                                                                   
                                                                     <p class="control-label"> Field Groups </p>
                                                                     <table class="table table-condensed table-responsive table-actions" id="myTable">
                                                                         <thead>
