@@ -24,9 +24,13 @@
         <div id="main-content">
             <div class="alert alert-warning" role="alert" style="margin-bottom:15px"><strong style="margin-bottom:1rem; display:block">Privacy note</strong>
                 <p>This page contains items of personally sensitive data, and are hidden to protect your privacy. Please unmask these fields to continue with your verification.</p>
-                <button class="btn btn-xs btn-primary reveal" style="margin-top:1rem">Unmask sensitive data</button>
-                <button class="btn btn-xs btn-default" id="skipfornow" style="margin-top:1rem" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
-                <button class="btn btn-xs btn-default hidedata" style="margin-top:1rem; display:none">Hide sensitive data</button>
+                <div style="margin-bottom:1rem">
+                    <button class="btn btn-xs btn-primary reveal" style="margin-top:1rem">Unmask sensitive data</button>
+                </div>
+                <p>You may also skip this verification for now (3 deferral(s) remaining).</p>
+                <div style="margin-bottom:1rem">
+                    <button class="btn btn-xs btn-default" id="skipfornow" style="margin-top:1rem" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -173,14 +177,22 @@
                     </div>
                     <div class="radio" style="display:none">
                         <input id="question2" name="question" type="radio" class="with-font" value="sel">
-                        <label for="question2" class="lead">I choose to verify this information later. </label>
+                        <label for="question2" class="lead">I choose to verify this information later (3 defferal(s) remaining). </label>
                     </div>
                 </fieldset>
                 <div class="row fieldset1" style="">
-                    <div class="col-md-12 text-center" style="padding-bottom:15px; padding-top:15px;">
-                        <button class="btn btn-lg btn-primary" id="submit1_0" data-toggle="" data-target="" disabled style="display:none"> Submit</button>
-                        <button class="btn btn-lg btn-primary" id="submit1_1" data-toggle="" data-target=""  style="display:"> Unmask sensitive data</button>
-                        <button class="btn btn-lg btn-default" id="skipfornow2" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
+                    <div class="col-md-12" style="padding-bottom:15px; padding-top:15px;">
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-primary" id="submit1_0" data-toggle="" data-target="" disabled style="display:none"> Submit</button>
+                        </div>
+                        <p>This page contains items of personally sensitive data, and are hidden to protect your privacy. Please unmask these fields to continue with your verification.</p>
+                        <div class="text-center">
+                            <button class="btn btn-lg btn-primary" id="submit1_1" data-toggle="" data-target=""  style="display:"> Unmask sensitive data</button>
+                        </div>
+                        <div style="margin-top:2rem"> You may also skip this verification for now (3 deferral(s) remaining).</div>
+                        <div class="text-center" style="margin-top:1rem">
+                            <button class="btn btn-lg btn-default" id="skipfornow2" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
+                        </div>
                         <button class="btn btn-lg btn-primary" id="submit1_2" data-toggle="" data-target="" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');"  style="display:none"> Submit</button>
                     </div>
                 </div>
@@ -192,7 +204,7 @@
                     </div>
                     <div class="radio">
                         <input id="question4" name="question" type="radio" class="with-font" value="sel">
-                        <label for="question4" class="lead">I choose to verify this information later. </label>
+                        <label for="question4" class="lead">I choose to verify this information later (3 defferal(s) remaining). </label>
                     </div>
                 </fieldset>
                 <div class="row fieldset2" style="display:none">
