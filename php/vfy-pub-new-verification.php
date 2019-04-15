@@ -187,13 +187,14 @@ $page_title = 'create-new';
                                                                         <textarea class="form-control text-formatter" cols="40" id="section_description" name="message" rows="3"></textarea>
                                                                     </div>
                                                                     <p class="control-label"> Field Groups </p>
-                                                                    <table class="table table-condensed table-responsive table-actions" id="myTable">
+                                                                   <table class="table table-condensed table-responsive table-actions" id="myTable">
                                                                         <thead>
                                                                             <tr>
                                                                                 <th>Data Pull </th>
                                                                                 <th>Callback</th>
                                                                                 <th>Unique Key</th>
-                                                                                <th> Initiate URL</th>
+                                                                                <th>Button URL</th>
+                                                                                <th>Button Label</th>
                                                                                 <th> Actions </th>
                                                                             </tr>
                                                                         </thead>
@@ -217,6 +218,7 @@ $page_title = 'create-new';
                                                                                     </select></td>
                                                                                 <td><input type="text" class="form-control"></td>
                                                                                 <td><input type="text" class="form-control"></td>
+                                                                                <td><input type="text" class="form-control" value="Edit"></td>
                                                                                 <td><a href="#" class="btn btn-xs btn-default disabled" style="margin-top:5px">Delete</a></td>
                                                                             </tr>
                                                                         </tbody>
