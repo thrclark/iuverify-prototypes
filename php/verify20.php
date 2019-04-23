@@ -215,17 +215,27 @@
                 </div>
                
                 <div class="row" id="demojs_verifyscreen"  style="display:none">
-                    <div class="col-sm-6 col-sm-offset-3">
+                    <div class="col-sm-6">
                         <div class="panel panel-default" style=" background-color:transparent;">
-                            <div class="panel-body" style="">
-                                <div class="radio">
-                                    <input ng-model="verify.verified" id="question1" name="checked" type="checkbox" class="with-font" aria-invalid="false">
-                                    <label for="question1" ng-bind="verify.verifyMessage">I have verified that the above information is up to date and correct.</label>
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between; min-height: 180px;">
+                                <div class="radio" style="margin-top:0px">
+                                    <input ng-model="verify.verified" id="question4" name="checked" type="checkbox" class="with-font" aria-invalid="false">
+                                    <label for="question4" ng-bind="verify.verifyMessage">I have verified that the above information is up to date and correct.</label>
                                 </div>
-                                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top:auto">Verify</button>
+                                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top:auto" id="submit2" disabled>Verify</button>
                             </div>
                         </div>
                     </div>
+                    
+                     <div class="col-sm-6">
+                        <div class="panel panel-default" style=" background-color:transparent;">
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between; min-height: 180px;">
+                                <p>You may skip this verification for now. You have 3 deferral(s) remaining.</p>
+                                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-top:auto">Verify later</button>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 
                 <!--    <fieldset class="fieldset1" style="display:none">
@@ -298,6 +308,7 @@
 		 $("#demojs_revealskipscreen").hide();
 		
 		$("#demojs_verifyscreen").show();
+		$('html, body').animate({scrollTop: '0px'}, 500);
 		
 		
 		
@@ -311,6 +322,20 @@
         $(".alert").show();
     });
 </script> 
+
+
+
+<script>
+    $(document).ready(function() {
+        $('#question4').click(function() {
+            if ($(this).is(':checked')) {
+				$("#submit2").removeAttr("disabled");
+            }
+        });
+    });
+</script> 
+
+
 
 </body>
 </html>
