@@ -187,7 +187,7 @@ $page_title = 'create-new';
                                                                         <textarea class="form-control text-formatter" cols="40" id="section_description" name="message" rows="3"></textarea>
                                                                     </div>
                                                                     <p class="control-label"> Field Groups </p>
-                                                                   <table class="table table-condensed table-responsive table-actions" id="myTable">
+                                                                    <table class="table table-condensed table-responsive table-actions" id="myTable">
                                                                         <thead>
                                                                             <tr>
                                                                                 <th>Data Pull </th>
@@ -387,7 +387,6 @@ $page_title = 'create-new';
                                                                         <dd>10</dd>
                                                                         <dt>Deferral Intervals</dt>
                                                                         <dd>1440 minutes</dd>
-                                                                     
                                                                     </dl>
                                                                 </div>
                                                             </div>
@@ -513,8 +512,8 @@ $page_title = 'create-new';
                                                                         <li><span class="label label-primary">Person ID</span> is not: <span class="label label-default">jhopf</span></li>
                                                                         <li class="and-or">- and -</li>
                                                                         <li><span class="label label-primary"> Group ID</span> is: <span class="label label-default">BL-STUDENT</span></li>
-                                                                            <li class="and-or">- and -</li> 
-                                                                             <ul>
+                                                                        <li class="and-or">- and -</li>
+                                                                        <ul>
                                                                             <li><span class="label label-primary"> Person ID</span> is: <span class="label label-default">josshmoe</span></li>
                                                                             <li class="and-or">- or -</li>
                                                                             <li><span class="label label-primary"> Person ID</span> is: <span class="label label-default">janedoe</span></li>
@@ -534,7 +533,8 @@ $page_title = 'create-new';
                                                                         <li><span class="label label-primary">Group ID</span> is: <span class="label label-default">BL-FACULTY</span></li>
                                                                         <li class="and-or">- and -</li>
                                                                         <li><span class="label label-primary">Group ID</span> is: <span class="label label-default">BL-STAFF</span></li>
-                                                                        <li class="and-or">- and -</li><ul>
+                                                                        <li class="and-or">- and -</li>
+                                                                        <ul>
                                                                             <li><span class="label label-primary">Person ID</span> is not: <span class="label label-default">josshmoe</span></li>
                                                                             <li class="and-or">- or -</li>
                                                                             <li><span class="label label-primary">Person ID</span> is not: <span class="label label-default">janedoe</span></li>
@@ -581,12 +581,8 @@ $page_title = 'create-new';
                                             </div>
                                             <div class="col-xs-12 wizard-actions">
                                                 <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
-                                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#confirm_exit" >Cancel</button>
-                                                        
-                                                        <a href="verify-preview.php" class="btn btn-default" target="_blank">Preview</a>
-                                                        
-                                                        
-                                               
+                                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#confirm_exit" >Cancel</button>
+                                                    <a href="verify-preview.php" class="btn btn-default" target="_blank">Preview</a>
                                                     <div class="btn-group" role="group" aria-label="First group">
                                                         <button class="btn btn-default prevBtn" type="button" > <i class="fa fa-angle-left" aria-hidden="true"></i> Previous</button>
                                                         <button class="btn btn-primary" type="button" id="form_save" data-toggle="modal" data-target="#confirm_save">Save</button>
