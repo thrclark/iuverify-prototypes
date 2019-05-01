@@ -6,12 +6,22 @@
 <?php include ('includes/head-meta.php') ?>
 <?php include ('includes/styles.php') ?>
 <style>
-.privatedata {
-	display: noneee;
-}
 .mask {
 	font-size: .875rem;
 	letter-spacing: .25rem;
+}
+.submission .radio label, .submission .checkbox label {
+	padding-left: 40px;
+}
+.submission input[type=checkbox].with-font~label:before, .submission input[type=radio].with-font:checked~label:before, .submission input[type=checkbox].with-font:checked~label:before {
+	font-size: 32px;
+}
+.submission input[type=radio].with-font~label:before, input[type=checkbox].with-font~label:before {
+	color: #666666;
+}
+.popover.bottom {
+	margin-top: 45px;
+	margin-left: 14px;
 }
 </style>
 <?php include ('includes/scripts.php') ?>
@@ -23,13 +33,23 @@
     <div class="main-content container" role="main">
         <div id="main-content">
             <div class="alert alert-warning" role="alert" style="margin-bottom:15px"><strong style="margin-bottom:1rem; display:block">Privacy note</strong>
-                <p>This page contains items of personally sensitive data, and are hidden to protect your privacy. Please unmask these fields to continue with your verification.</p>
-                <div style="margin-bottom:1rem">
-                    <button class="btn btn-xs btn-primary reveal" style="margin-top:1rem">Unmask sensitive data</button>
-                </div>
-                <p>You may also skip this verification for now (3 deferral(s) remaining).</p>
-                <div style="margin-bottom:1rem">
-                    <button class="btn btn-xs btn-default" id="skipfornow" style="margin-top:1rem" onclick="alert('Design note - verification is now deferred, and user is redirected to application.');">Verify later</button>
+                <div class="row" id="">
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" style=" background-color:transparent;">
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between; ">
+                                <p> This page contains personally sensitive data, which is masked to protect your privacy. </p>
+                                <button type="button" class="btn btn-primary btn-xs reveal" style="margin-top:auto; width:fit-content">Unmask sensitive data</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" style=" background-color:transparent;">
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between; ">
+                                <p> You can choose to verify later. You may choose this option 3 more time(s). </p>
+                                <button type="button" class="btn btn-default btn-xs" style="margin-top:auto; width:fit-content">Verify later</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -169,7 +189,47 @@
             </div>
             <div class="submission">
                 <?php include ('includes/instructions-bottom.php') ?>
-                <fieldset class="fieldset1" style="display:none">
+                <div class="row" id="demojs_revealskipscreen">
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" style=" background-color:transparent;">
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
+                                <p> This page contains personally sensitive data, which is masked to protect your privacy. </p>
+                                <button type="button" class="btn btn-primary btn-lg btn-block reveal" style="margin-top:20px">Unmask sensitive data</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" style=" background-color:transparent;">
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
+                                <p> You can choose to verify later. You may choose this option 3 more time(s). </p>
+                                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-top:20px">Verify later</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="demojs_verifyscreen"  style="display:none">
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" style=" background-color:transparent;">
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
+                                <div class="radio" style="margin-top:0px"  >
+                                    <input id="question4" name="checked" type="checkbox" class="with-font" aria-invalid="false" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Check to verify">
+                                    <label for="question4" ng-bind="verify.verifyMessage">I have verified that the above information is up to date and correct.</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top:20px" id="submit2">Verify</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel panel-default" style=" background-color:transparent;">
+                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
+                                <p> You can choose to verify later. You may choose this option 3 more time(s). </p>
+                                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-top:20px">Verify later</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--    <fieldset class="fieldset1" style="display:none">
                     <legend class="sr-only">Verify</legend>
                     <div class="radio" style="display:none">
                         <input id="question1" name="question" type="radio" class="with-font" value="sel">
@@ -211,7 +271,8 @@
                     <div class="col-md-12 text-center" style="padding-bottom:15px; padding-top:15px;">
                         <button class="btn btn-lg btn-primary" id="submit2" data-toggle="" data-target="" disabled onclick="alert('Design note - verification is now deferred/completed, and user is redirected to application.');"> Submit</button>
                     </div>
-                </div>
+                </div>--> 
+                
             </div>
         </div>
     </div>
@@ -235,6 +296,13 @@
     $(".reveal").click(function() {
         $(".mask").hide();
         $(".reveal").hide();
+		 $("#demojs_revealskipscreen").hide();
+		
+		$("#demojs_verifyscreen").show();
+		$('html, body').animate({scrollTop: '0px'}, 500);
+		
+		
+		
 		$(".alert").slideUp();
 		$("#skipfornow").hide();
 		$(".fieldset1").hide();
@@ -247,70 +315,46 @@
 </script> 
 <script>
     $(document).ready(function() {
-        $('#question1').click(function() {
-            if ($(this).is(':checked')) {
-                $("#submit1_1").show();
-                $("#submit1_0").hide();
-				$("#submit1_2").hide();
-				$("#submit1_1").removeAttr("disabled");
-            }
-        });
-    });
-</script> 
-<script>
-    $(document).ready(function() {
-        $('#question2').click(function() {
-            if ($(this).is(':checked')) {
-                $("#submit1_1").hide();
-                $("#submit1_2").show();
-				$("#submit1_0").hide();
-				//$(".alert").hide();
-				$("#submit1_2").removeAttr("disabled");
-            }
-        });
-    });
-</script> 
-<script>
-    $(document).ready(function() {
-        $('#question3').click(function() {
-            if ($(this).is(':checked')) {
-				$("#submit2").removeAttr("disabled");
-            }
-        });
-    });
-</script> 
-<script>
-    $(document).ready(function() {
         $('#question4').click(function() {
             if ($(this).is(':checked')) {
-				$("#submit2").removeAttr("disabled");
+				//$("#submit2").removeAttr("disabled");
             }
         });
+		
+		$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+
+
     });
 </script> 
-<script>
-    $("#submit1_1").click(function() {
-        $(".mask").hide();
-        $(".reveal").hide();
+<script >
+    $(document).ready(function() {
+        $("#submit2").click(function() {
+            $('#question4').popover('toggle')
+        });
+		
+		 $("#question4").click(function() {
+			 $('#question4').popover('show')
+            $('#question4').popover('destroy')
+        });
+		
+		 $('#submit2').click(function() {
+            if ($('#question4').is(':checked')) {
+				 $('#question4').popover('destroy')
+            }
+        });
 		
 		
-		$("#submit1_1").hide();
-		$(".fieldset2").show();
-		$("#submit2").show();
-		$(".alert").slideUp();
-		$("#skipfornow, #skipfornow2").hide();
-		$(".fieldset1").hide();
-        $(".radio").show();
-        $(".privatedata").show();
 		
-    });
-	
-	$("#submit1_1").click(function() {
-    $('html, body').animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
-});
+		
+    }); 
 </script>
 </body>
 </html>
