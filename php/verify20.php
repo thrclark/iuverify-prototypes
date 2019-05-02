@@ -212,7 +212,7 @@
                         <div class="panel panel-default" style=" background-color:transparent;">
                             <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
                                 <div class="radio" style="margin-top:0px"  >
-                                    <input id="question4" name="checked" type="checkbox" class="with-font" aria-invalid="false" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Check to verify">
+                                    <input id="question4" name="checked" type="checkbox" class="with-font" aria-invalid="false" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Required">
                                     <label for="question4" ng-bind="verify.verifyMessage">I have verified that the above information is up to date and correct.</label>
                                 </div>
                                 <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top:20px" id="submit2">Verify</button>
