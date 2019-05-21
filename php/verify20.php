@@ -23,6 +23,32 @@
 	margin-top: 45px;
 	margin-left: 14px;
 }
+
+@media (min-width: 768px) {
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+}
+.row-eq-height .col-sm-6 .panel.panel-default {
+	background-color: transparent;
+	height: 100%;
+}
+.row-eq-height .col-sm-6 .panel.panel-default .panel-body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.row-eq-height .col-sm-6 .panel.panel-default .panel-body .btn {
+	margin-top: auto;
+}
+.row-eq-height .flex-col-100h {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
 </style>
 <?php include ('includes/scripts.php') ?>
 </head>
@@ -33,20 +59,20 @@
     <div class="main-content container" role="main">
         <div id="main-content">
             <div class="alert alert-warning" role="alert" style="margin-bottom:15px"><strong style="margin-bottom:1rem; display:block">Privacy note</strong>
-                <div class="row" id="">
+                <div class="row row-eq-height" id="">
                     <div class="col-sm-6">
-                        <div class="panel panel-default" style=" background-color:transparent;">
-                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between; ">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
                                 <p> This page contains personally sensitive data, which is masked to protect your privacy. </p>
-                                <button type="button" class="btn btn-primary btn-xs reveal" style="margin-top:auto; width:fit-content">Unmask sensitive data</button>
+                                <button type="button" class="btn btn-primary btn-xs reveal" style="width:fit-content">Unmask sensitive data</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="panel panel-default" style=" background-color:transparent;">
-                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between; ">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
                                 <p> You can choose to verify later. You may choose this option 3 more time(s). </p>
-                                <button type="button" class="btn btn-default btn-xs" style="margin-top:auto; width:fit-content">Verify later</button>
+                                <button type="button" class="btn btn-default btn-xs" style="width:fit-content">Verify later</button>
                             </div>
                         </div>
                     </div>
@@ -189,42 +215,42 @@
             </div>
             <div class="submission">
                 <?php include ('includes/instructions-bottom.php') ?>
-                <div class="row" id="demojs_revealskipscreen">
-                    <div class="col-sm-6">
-                        <div class="panel panel-default" style=" background-color:transparent;">
-                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
-                                <p> This page contains personally sensitive data, which is masked to protect your privacy. </p>
-                                <button type="button" class="btn btn-primary btn-lg btn-block reveal" style="margin-top:20px">Unmask sensitive data</button>
-                            </div>
+                <div class="row row-eq-height" id="demojs_revealskipscreen" style="">
+                    <div class="col-xs-12 col-sm-6" ng-class="{'col-sm-offset-3': verify.verification.canDefer==false}">
+                        <div class="panel panel-default">
+                            <div class="panel-body"> <span class="flex-col-100h">
+                                <p>This page contains personally sensitive data which is masked to protect your privacy.</p>
+                                <button type="button" class="btn btn-primary btn-lg btn-block reveal">Unmask sensitive data</button>
+                                </span> </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="panel panel-default" style=" background-color:transparent;">
-                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
+                    <div class="col-xs-12 col-sm-6" ng-if="verify.verification.canDefer">
+                        <div class="panel panel-default">
+                            <div class="panel-body"> <span class="flex-col-100h">
                                 <p> You can choose to verify later. You may choose this option 3 more time(s). </p>
-                                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-top:20px">Verify later</button>
-                            </div>
+                                <button type="button" class="btn btn-default btn-lg btn-block">Verify later</button>
+                                </span> </div>
                         </div>
                     </div>
                 </div>
-                <div class="row" id="demojs_verifyscreen"  style="display:none">
-                    <div class="col-sm-6">
-                        <div class="panel panel-default" style=" background-color:transparent;">
-                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
+                <div class="row row-eq-height" id="demojs_verifyscreen"  style="display:none">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body" style=""> <span class="flex-col-100h">
                                 <div class="radio" style="margin-top:0px"  >
                                     <input id="question4" name="checked" type="checkbox" class="with-font" aria-invalid="false" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Required">
                                     <label for="question4" ng-bind="verify.verifyMessage">I have verified that the above information is up to date and correct.</label>
                                 </div>
-                                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top:20px" id="submit2">Verify</button>
-                            </div>
+                                <button type="button" class="btn btn-primary btn-lg btn-block" id="submit2">Verify</button>
+                                </span> </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="panel panel-default" style=" background-color:transparent;">
-                            <div class="panel-body" style="  display: flex;flex-direction: column;justify-content: space-between;">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body" style=""> <span class="flex-col-100h">
                                 <p> You can choose to verify later. You may choose this option 3 more time(s). </p>
-                                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-top:20px">Verify later</button>
-                            </div>
+                                <button type="button" class="btn btn-default btn-lg btn-block">Verify later</button>
+                                </span> </div>
                         </div>
                     </div>
                 </div>
